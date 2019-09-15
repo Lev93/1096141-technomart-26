@@ -10,10 +10,10 @@
         <a href="index.html">
           <img src="#" alt="Техномарт">
         </a>
-        <div class="search">
-          <img src="#">
-          <p>Поиск:</p>
-        </div>
+        <form class="search" action="#" method="get">
+          <button class="search-submit" id="search-submit" type="submit"></button>
+          <input class="search-field" id="search-field" type="search" name="search" placeholder="Поиск">
+        </form>
         <a class="bookmark" href="#">Закладки: <span>0</span></a>
         <a class="basket" href="#">Корзина: <span class="count">0</span></a>
         <a class="order" href="#">Оформить заказ</a>
@@ -223,7 +223,32 @@
               <h3>Контакты</h3>
               <p>Вы можете забрать товар сами, заехав в наш офис:</p>
               <img src="img/map.jpg" alt="map">
+              <section>
+                <p>
+                  <img src="img/big-map.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург">
+                </p>
+                <a class="window-message-close" href="#">закрыть</a>
+              </section>
               <p><a href="#" class="redbutton">Заблудились? Напишите нам!</a></p>
+              <div class="window-message">
+                <a class="window-message-close" href="#">закрыть</a>
+                <form class="contact-form" action="#" method="post">
+                  <div class="window-message-content">
+                     <label class="contact-form-label" for="name-field">Ваше имя:
+                        <input class="contact-form-item" type="text" name="name" id="name-field" placeholder="Имя Фамилия">
+                     </label>
+                     <label class="contact-form-label" for="email-field">Ваш e-mail:
+                        <input class="contact-form-item" type="email" name="email" id="email-field" placeholder="email@example.com">
+                     </label>
+                     <label class="contact-form-label" for="text-field">Текст письма:
+                        <textarea class="contact-form-item" name="text" rows="5" id="text-field" placeholder="В свободной форме"></textarea>
+                     </label>
+                  </div>
+                  <div class="window-message-bottom">
+                      <button class="submit-button" type="submit" name="send">Отправить</button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </main>
