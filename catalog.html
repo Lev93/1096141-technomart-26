@@ -10,10 +10,10 @@
         <a href="index.html">
           <img src="#" alt="Техномарт">
         </a>
-        <div class="search">
-          <img src="#">
-          <p>Поиск:</p>
-        </div>
+        <form class="search" action="#" method="get">
+          <button class="search-submit" id="search-submit" type="submit"></button>
+          <input class="search-field" id="search-field" type="search" name="search" placeholder="Поиск">
+        </form>
         <a class="bookmark" href="#">Закладки: <span>0</span></a>
         <a class="basket" href="#">Корзина: <span class="count">10</span></a>
         <a class="order" href="#">Оформить заказ</a>
@@ -28,12 +28,10 @@
             <p class="adress">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
           <div class="user-block">
-            <div class="user-block-top">
-              <a href="#" class="user-block-name">
-                      Равшан Джамшутович
-              </a>
-              <a href="#" class="user-block-logout">Выйти</a>
-              </div>
+            <form class="Login" action="#" method="get">
+              <input class="Login-field" id="Login-field" type="text" name="Login" placeholder="Равшан Джамшутович">
+              <button class="Logout" id="Logout" type="reset"></button>
+            </form>
             <div class="user-block-bottom">
               <a class="user-block-link" href="#">Мои заказы</a>
               <a class="user-block-link" href="#" >Личный кабинет</a>
@@ -63,6 +61,50 @@
                 <h1 class="page-title">Перфораторы</h1>
              </header>
               <section class="catalog-filter">
+                <form action="#" method="get">
+                  <header class="filter-header">
+                    <h2 class="filter-header-title">Фильтр:</h2>
+                  </header>
+                  <fieldset class="filter filter-price">
+                    <h3 class="filter-title">Цена</h3>
+                    <div class="range-controls">
+                      <div class="scale">
+                        <div class="bar"></div>
+                      </div>
+                      <div class="toggle-min"></div>
+                      <div class="toggle-max"></div>
+                    </div>
+                    <div class="price-controls">
+                      <label class="price-controls-min" for="price-controls-min">
+                        <input id="price-controls-min" type="text" value="0">
+                      </label>
+                      <label class="price-controls-max" for="price-controls-max">
+                        <input id="price-controls-max" type="text" value="30 000">
+                      </label>
+                    </div>
+                    </fieldset>
+                    <fieldset class="filter filter-brands">
+                      <h3 class="filter-title">Производители</h3>
+                      <input class="filer-brands-checkbox" id="checkbox-1" type="checkbox" name="checkbox" value="bosch" checked>
+                      <label class="filter-brands-item" for="checkbox-1">Bosch</label>
+                      <input class="filer-brands-checkbox" id="checkbox-2" type="checkbox" name="checkbox" value="interscol">
+                      <label class="filter-brands-item" for="checkbox-2">Интерскол</label>
+                      <input class="filer-brands-checkbox" id="checkbox-3" type="checkbox" name="checkbox" value="makita" checked>
+                      <label class="filter-brands-item" for="checkbox-3">Makita</label>
+                      <input class="filer-brands-checkbox" id="checkbox-4" type="checkbox" name="checkbox" value="dewalt">
+                      <label class="filter-brands-item" for="checkbox-4">Dewalt</label>
+                      <input class="filer-brands-checkbox" id="checkbox-5" type="checkbox" name="checkbox" value="hitachi">
+                      <label class="filter-brands-item" for="checkbox-5">Hitachi</label>
+                    </fieldset>
+                    <fieldset class="filter-supply">
+                      <h3 class="filter-title">Питание</h3>
+                      <input class="filter-supply-radio" id="radio-1" type="radio" name="radiogroup" value="battery" checked>
+                      <label class="filter-supply-item" for="radio-1">Аккумуляторные</label>
+                      <input class="filter-supply-radio" id="radio-2" type="radio" name="radiogroup" value="mains">
+                      <label class="filter-supply-item" for="radio-2">Сетевые</label>
+                    </fieldset>
+                    <button class="catalog-btn" type="submit">Показать</button>
+                 </form>
               </section>
               <section class="catalog-gallery">
                 <header class="filter-header">

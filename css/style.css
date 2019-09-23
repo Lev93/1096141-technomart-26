@@ -1,0 +1,269 @@
+body {
+    font-family: "Cuprum";
+    color: #000000;
+	width: 1200px;
+	font-size: 17px;
+}
+.main-header{
+	 background-color: #f4f7f9;
+	 height: 320px;
+}
+.main-header-top{
+	background-color: #293449;
+	height: 42px;
+}
+.main-header-bar{
+	display: flex;
+    flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	height: 100%;
+	width: 950px;
+	margin-left: 130px;
+}
+a{  
+	color:#ffffff;
+	text-decoration: none;
+}
+.order {
+  background-color: #63a63e;
+  width: 150px;
+  height: 100%;	
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.basket,.bookmark{
+	width:160px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-logo{
+    background-color: #ee3643;	
+	width: 220px;
+	height: 42px;	
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	box-shadow: 0 5px 0 0 #b52933;
+}
+.main-logo,.basket,.bookmark,.order{
+	flex-grow: 0;
+}
+.search{
+	flex-grow: 1;
+}
+.bookmark::before {
+  content: "";
+  position: absolute;
+  background: url('../img/icon-bookmark.svg') no-repeat;
+  width: 25px;
+  height: 25px;
+  left: 638px;
+  opacity: 0.3;
+}
+.basket::before {
+  content: "";
+  position: absolute;
+  background: url('../img/cart-icon.svg') no-repeat;
+  width: 25px;
+  height: 25px;
+  left: 800px;
+  opacity: 0.3;
+}
+.search-field{
+	width:100%;
+	height:42px;
+	padding-left:50px;
+	border: none;
+	color: #ffffff;
+    background-color: #293449;
+    outline: none;
+}
+.search-submit{
+    position:absolute;
+	background: url('../img/icon-search.svg') no-repeat;
+  	width: 20px;
+    height: 20px;
+	top: 22px;
+	left: 370px;
+	border: none;
+	opacity: 0.3;
+}
+.order:hover{
+	background-color: #6db254;
+}
+.order:active {
+    background-color: #518534;
+}
+.basket:hover,
+.bookmark:hover {
+	height: 100%;
+     opacity: 1;
+}
+.basket:active,
+.bookmark:active {
+	height: 100%;
+    background-color: #212a3a;	
+}
+.main-logo:hover {
+    background-color: #d70b0c;
+}
+.main-logo:active {
+    background-color: #d70b0c;
+}
+
+.search:hover{
+    background-color: #212a3a;
+    color: #ffffff;
+}
+
+.search-field:focus{
+    background-color: #ffffff;
+	color: black;
+}
+.header-middle{
+    display: flex;
+    flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	height: 158px;
+	width: 950px;
+	margin-left: 130px;
+}
+.headinfo-block{
+width: 320px;
+}
+.headinfo{
+  font-size: 16px;
+  font-family: "Cuprum";
+  color: rgb(238, 54, 67);
+  font-style: italic;
+  line-height: 1.438;
+  padding-left: 53px;
+  padding-right: 66px;
+}
+.adressandphone {
+  width: 261px;
+}
+.phone{
+	border:2px solid #ffffff;
+	display: flex;
+	height:40px;
+	align-items: center;
+}
+.phone p{
+	font-size: 21px;
+	color: rgb(238, 54, 67);
+	margin-left: 35px;
+}
+.phone img{
+	margin-left: 10px;
+}
+.adress{
+	font-size: 13px;
+	color: rgb(50, 66, 92);
+	text-align: center;
+}
+.login1{
+	border: none;
+	background-color: #ffffff;
+	height: 45px;
+	font-size: 21px;
+	color: rgb(0, 0, 0);
+	margin-left: 90px;
+	width:120px;
+	padding-left:30px;
+}
+.login2{
+	border: none;
+	background-color: #ffffff;
+	height: 45px;
+	font-size: 21px;
+	color: rgb(0, 0, 0);
+	margin-left: 10px;
+	width:150px;
+}
+
+.login1::before {
+  content: "";
+  position: absolute;
+  background: url('../img/icon-login.svg') no-repeat;
+  width: 25px;
+  height: 17px;
+  top: 120px;
+  left: 820px;
+  opacity: 0.3;
+}
+.mainnav ul{
+	display: flex;
+	height: 64px;
+	width: 940px;
+	background-color: #293449;
+	margin-left: 130px;
+	justify-content: flex-start;
+    align-items: center;
+	list-style-type: none;
+	box-shadow: 0 5px 0 0 #293449;
+}
+.mainnav ul li{
+  font-size: 17px;
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainnav ul li:hover {
+     background-color: #212a3a;	
+}
+.mainnav ul li:active{
+	background-color: #212a3a;	
+	color: #b2b2b2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

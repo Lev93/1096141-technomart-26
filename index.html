@@ -3,39 +3,40 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
-      <div class="main-header-bar">
-        <a href="index.html">
-          <img src="#" alt="Техномарт">
-        </a>
-        <form class="search" action="#" method="get">
-          <button class="search-submit" id="search-submit" type="submit"></button>
-          <input class="search-field" id="search-field" type="search" name="search" placeholder="Поиск">
-        </form>
-        <a class="bookmark" href="#">Закладки: <span>0</span></a>
-        <a class="basket" href="#">Корзина: <span class="count">0</span></a>
-        <a class="order" href="#">Оформить заказ</a>
-      </div>
+	  <div class="main-header-top">
+        <div class="main-header-bar">
+          <a class="main-logo" href="index.html">
+            <img src="img/technomart.png" alt="Техномарт">
+          </a>
+          <form class="search" action="#" method="get">
+            <button class="search-submit" id="search-submit" type="submit"></button>
+            <input class="search-field" id="search-field" type="search" name="search" placeholder="Поиск:">
+          </form>
+		  <a class="bookmark" href="#">Закладки: <span>0</span></a>
+          <a class="basket" href="#">Корзина: <span class="count">0</span></a>
+          <a class="order" href="#">Оформить заказ</a>
+        </div>
+	  </div>
       <div class="header-middle">
-        <p class="headinfo">Интернет магазин строительных материалов и инструментов для ремонта</p>
+        <div class="headinfo-block">
+		  <p class="headinfo">Интернет магазин строительных материалов и инструментов для ремонта</p>
+		</div>  
         <div class="adressandphone">
           <div class="phone">
-            <img src="#" alt="телефон">
-              <p>+7 (812) 555-05-55</p>
+            <img src="img/icon-phone.svg" alt="Телефон">
+            <p>+7 (812) 555-05-55</p>
           </div>
-            <p class="adress">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+            <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
-          <ul>
-            <li>
-              <button type="button" class="login">Войти</button>
-              <button type="button" class="login">Регистрация</button>
-            </li>
-          </ul>
+          <button type="button" class="login1">Войти</button>
+          <button type="button" class="login2">Регистрация</button>
       </div>
       <nav class="mainnav">
-        <ul class="main-nav-ul">
+        <ul>
           <li class="main-nav-ul-link"><a href="info.html">Главная</a></li>
           <li class="main-nav-ul-link"><a href="company.html">Компания</a></li>
           <li class="main-nav-ul-link"><a href="catalog.html">Каталог</a></li>
