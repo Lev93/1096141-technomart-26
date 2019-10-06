@@ -2,6 +2,8 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <title>Техномарт</title>
 	<link href="css/style.css" rel="stylesheet">
   </head>
@@ -23,7 +25,8 @@
 	  </div>
       <div class="header-middle">
         <div class="headinfo-block">
-		  <h1 class="headinfo">Интернет магазин <br>строительных материалов<br>и инструментов для ремонта</h1>
+		  <h1 class="headinfo">Интернет магазин <br>строительных материалов<br>и инструментов для ремонта
+		  </h1>
 		</div>  
         <div class="adressandphone">
           <div class="phone">
@@ -39,6 +42,7 @@
             </form>
             <div class="user-block-bottom">
               <a class="user-block-link" href="#">Мои заказы</a>
+			  <p class="dot"></p>
               <a class="user-block-link" href="#" >Личный кабинет</a>
             </div>
            </div>
@@ -71,18 +75,18 @@
             <span class="breadcrumbs-item">Перфораторы</span>
 		  </li>
         </ul>
-        <article class="catalog">
+        <section class="catalog">
           <header class="page-header">
             <h1 class="page-title">Перфораторы</h1>
           </header>
 		  <div class="main-part">
             <section class="catalog-filter">
-              <form action="#" method="get">
-                <header class="filter-header">
+			   <header class="filter-header">
                   <h2 class="filter-header-title">Фильтр:</h2>
                 </header>
+              <form action="#" method="get">
                 <fieldset class="filter filter-price">
-                  <h3 class="filter-title">Цена:</h3>
+                  <h3 class="filter-title-h3">Цена:</h3>
                   <div class="range-controls">
                     <div class="scale">
                       <div class="bar"></div>
@@ -100,7 +104,7 @@
                   </div>
                 </fieldset>
                 <fieldset class="filter filter-brands">
-                  <h3 class="filter-title">Производители</h3>
+                  <legend class="filter-title">Производители</legend>
                   <input class="filer-brands-checkbox" id="checkbox-1" type="checkbox" name="checkbox" value="bosch" checked>
                   <label class="filter-brands-item" for="checkbox-1">Bosch</label>
                     <input class="filer-brands-checkbox" id="checkbox-2" type="checkbox" name="checkbox" value="interscol">
@@ -113,7 +117,7 @@
                   <label class="filter-brands-item" for="checkbox-5">Hitachi</label>
                 </fieldset>
                 <fieldset class="filter filter-supply">
-                  <h3 class="filter-title">Питание</h3>
+                   <legend class="filter-title">Питание</legend>
                    <input class="filter-supply-radio" id="radio-1" type="radio" name="radiogroup" value="battery" checked>
                    <label class="filter-supply-item" for="radio-1">Аккумуляторные</label>
                    <input class="filter-supply-radio" id="radio-2" type="radio" name="radiogroup" value="mains">
@@ -124,9 +128,9 @@
               </section>
               <section class="catalog-gallery">
                 <header class="filter-header-2">
-                  <h2 class="filter-header-title-2">
+                  <p class="filter-header-title-2">
                     Сортировка:
-                  </h2>
+                  </p>
                   <div class="sort-list">
                     <a class="sort-item sort-item-active" href="#">По цене</a>
                     <a class="sort-item" href="#">По типу</a>
@@ -254,13 +258,14 @@
                          <span class="paginator-link-current" href="#">1</span>
                          <a class="paginator-link" href="#">2</a>
                          <a class="paginator-link" href="#">3</a>
-                         <a class="paginator-link catalog-btn" href="#">Следующая</a>
+                         <a class="paginator-link-next" href="#">Следующая</a>
                        </div>
                      </section>
 			  </div>
-			</article>
-                     <section class="catalog-promo">
-                       <div class="container-center">
+			</section >
+		</div>
+		 <section class="catalog-promo">
+           <div class="container-center wrapper">
                          <h2 class="page-title catalog-promo-title">Пара слов о перфораторах</h2>
                          <p class="page-text">
                            Перфоратор — универсальный строительный инструмент.
@@ -272,9 +277,8 @@
                            В ассортиментном ряду есть выбор «трехрежимников»:
                            в одном устройстве будут совмещены отбойный молоток и ударная дрель.
                          </p>
-                      </div>
-                    </section>
-		</div>
+            </div>
+         </section>
        </main>    
        <footer class="main-footer">
         <div class="main-footer-content">
@@ -365,5 +369,15 @@
 		  </div>	  
         </div>
       </footer>
-                </body>
-              </html>
+	   <div class="popup modal-cart">
+        <a class="popup-close modal-cart-close" href="catalog.html">Назад</a>
+        <div class="modal-cart-content">
+            <p class="modal-cart-text">Товар добавлен в корзину!</p>
+        </div>
+        <div class="modal-cart-footer">
+            <button class="modal-cart-btn" type="submit" name="send">Оформить заказ</button>
+            <a class="modal-cart-close-btn" href="#">Продолжить покупки</a>
+        </div>
+     </div>
+   </body>
+ </html>
