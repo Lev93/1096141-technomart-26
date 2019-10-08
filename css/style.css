@@ -174,12 +174,14 @@ input[type="search"]::placeholder {
 .main-logo:active {
     background-color: #ba2732;
 }
-
-.search-submit:hover{
-	opacity: 1.0;
+.search-field:hover~.search-submit{
+    opacity: 1.0;
 }
 .search-field:hover{
     background-color: #212a3a;
+}
+.Login-field:hover~.Logout{
+	opacity: 1.0;
 }
 .search-field:focus{
     background: #FFFFFF url('../img/icon-search-red.png') no-repeat 17px 12px;
@@ -233,7 +235,7 @@ input[type="search"]::placeholder {
 	margin-top: -1px;
 }
 .adressandphone p{
-	font-family: "Cuprum";
+	font-family: "Cuprum",Arial ,sans-serif;
 	font-size: 14px;
 	margin-top: 4px;
 	white-space: nowrap;
@@ -402,11 +404,13 @@ input[type="search"]::placeholder {
 	justify-content: space-around;
     align-items: center;
 	list-style-type: none;
-	width: 960px;
+	width: 940px;
 	box-sizing: border-box;
 	margin: auto;
 	padding-left: 10px;
 	padding-right: 10px;
+	background-color: #32425c;
+	box-shadow: 0 5px 0 0 #293449;
 }
 .site-navigation li{
 	flex-grow: 1;
@@ -421,10 +425,10 @@ input[type="search"]::placeholder {
   padding: 15px 30px 23px 30px;
 }
 .site-navigation li:first-child a{
-	padding: 15px 30px 23px 50px;
+	padding: 15px 30px 23px 41px;
 }
 .site-navigation li:last-child a{
-	padding: 15px 50px 23px 30px;
+	padding: 15px 41px 23px 30px;
 }
 .site-navigation a:hover {
      background-color: #293449;	
@@ -559,10 +563,10 @@ input[type="search"]::placeholder {
 	box-sizing: border-box;
 }
 .main-footer-bar-copyright{
-	width:230px;
-	font-size: 16px;
+	width:240px;
+	font-size: 19px;
 	line-height: 18px;
-	color: rgb(255, 255, 255);	
+	color: rgb(255, 255, 255);
 }
 .main-footer-bar-social-media{
 	margin:0 auto;
@@ -577,7 +581,7 @@ input[type="search"]::placeholder {
   list-style: none;
   margin-top: 35px;
   margin-bottom: 32px;
-  margin-left: 54px;
+  margin-left: 44px;
 }
 .social{
   display: flex;
@@ -781,6 +785,7 @@ main{
     margin-left: auto;
     margin-right: auto;
 	margin-top: 59px;
+	margin-bottom: 33px;
 }
 .promo-item-index {
     margin-left: 20px;
@@ -892,18 +897,164 @@ main{
 .catalog-index .promo-item-index:first-child {
     margin-left: 0;
 }
+.perforator{
+	background-image: url("../img/picture1.jpg");
+	width: 620px;
+	height: 266px;
+}
+.drell{
+	background-image: url("../img/picture2.jpg");
+	width: 620px;
+	height: 266px;	
+}
+
 .slider-index {
-    display: flex;
     width: 620px;
     height: 266px;
-    overflow: hidden;
     margin: 0;
     padding: 0;
 }
-.slider-item-index {
-    background-color: gray;
-    list-style-type: none;
-    min-width: 100%;
+.slider { 
+    position: relative;
+}
+
+.slider{
+	margin: 0 auto;
+}
+
+.slides .slide{ 
+	width: 20%;
+	float: left;
+}
+
+.slides .image{ 
+	width: 500%;
+	line-height: 0;
+}
+
+.overflow{ 
+	width: 100%;
+	overflow: hidden;
+}
+
+#desktop:checked ~ .slider{ 
+	max-width: 620px;
+}
+
+#switch1:checked ~ .controls label:nth-child(2), 
+#switch2:checked ~ .controls label:nth-child(1){
+	background: url('../img/icon-left.png'); 
+	position: absolute;
+	display: block;
+	height: 40px;
+	width: 22px;
+	left:25px;
+	top: 113px;
+}
+
+#switch1:checked ~ .controls label:nth-child(1), 
+#switch2:checked ~ .controls label:nth-child(2){
+	background: url('../img/icon-right.png');
+	position: absolute;
+	display: block;
+	height: 40px;
+	width: 22px;
+	right: 20px;
+	top: 113px;
+}
+
+label, a{ 
+	cursor: pointer;
+}
+
+#switch1:checked ~ .slides .image{
+	margin-left: 0;
+}
+
+#switch2:checked ~ .slides .image{
+	margin-left: -100%;
+}
+
+.controls{ 
+	margin: -25% 0 0 0;
+	width: 100%;
+	height: 50px;
+}
+
+.active label{ 
+	border-radius: 10px; 
+	display: inline-block; 
+	width: 6px;
+	height: 6px;
+	border: 2px solid #ffffff;
+    background-color: #ffffff;
+	margin-left: 8px;
+}
+
+.active{ 
+	text-align: center;
+	position: absolute;
+	left: 287px;
+	bottom: -74px;
+}
+
+#switch1:checked ~ .active label:nth-child(1),
+#switch2:checked ~ .active label:nth-child(2){
+	background: #ee3643;
+}
+
+.switch-invisible{
+	display: none;
+}
+.features-slide-title {
+    font-size: 36px;
+    line-height: 36px;
+    font-family: 'Cuprum', 'Arial', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+	margin: 0;
+	margin-left: 25px;
+	margin-top: 23px;
+}
+
+.features-slide-text {
+    font-size: 18px;
+    line-height: 24px;
+    color: #ffffff;
+	margin: 0;
+	margin-left: 25px;
+	margin-top: 2px;
+	margin-bottom: 131px;	
+}
+
+.features-slide-btn {
+	background-color: #ee3643;
+	padding: 10px 45px 10px 50px;
+	margin-left: 25px;
+	text-transform: uppercase;
+	font-size: 14px;
+    line-height: 18px;
+	border-radius: 3px;
+}
+.features-slide-btn:hover{
+	background-color: #ca2c37;
+}
+.features-slide-btn:active{
+	background-color: #ba2732;
+}
+.product-card .flag-new {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  
+  width: 60px;
+  height: 59px;
+  
+  text-indent: -1000px;
+  
+  z-index: 20;
+	background: url('../img/new-flag.png') no-repeat;
 }
 
 .section-bottom-index {
@@ -915,9 +1066,48 @@ main{
     margin: 0;
     padding: 0;
 }
-.drel{
-	background-image: url("../img/picture2.jpg")
+.index-header{
+	background-color: #f9f5f0;
 }
+.popular-brands{
+	margin: 0;
+	padding: 0;
+}
+.index-header{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.index-header-title{
+	margin: 0;
+	padding: 0;
+	font-size: 30px;
+	line-height: 30px;
+	font-family: 'Cuprum', 'Arial', sans-serif;
+	text-transform: uppercase;
+	padding-top: 30px;
+	color: #32425c;
+	padding-left: 30px;
+	padding-right: 0;
+	max-width: 30%;
+	padding-bottom: 29px;
+	font-weight: 500;
+}
+.index-header-btn{
+	margin: 0;
+	padding-bottom: 0;
+	font-size: 14px;
+	line-height: 18px;
+	background-color: #ee3643;
+	padding: 10px 55px 10px 55px;
+	margin-left: 370px;
+	border-radius: 3px;
+	text-transform: uppercase;
+
+}
+
+
 /*Index*/
 
 
@@ -1309,10 +1499,10 @@ main{
 .product-card {
   font-size: 16px;
 }
-.product-card .flag-new {
+.materials .flag-new {
   position: absolute;
-  top: -1px;
-  right: -1px;
+  top: 0px;
+  right: 0px;
   
   width: 60px;
   height: 59px;
