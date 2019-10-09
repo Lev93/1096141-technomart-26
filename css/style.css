@@ -1077,7 +1077,7 @@ label, a{
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	margin-bottom: 20px;
+	margin: 0;
 }
 .index-header-title{
 	margin: 0;
@@ -1090,22 +1090,72 @@ label, a{
 	color: #32425c;
 	padding-left: 30px;
 	padding-right: 0;
-	max-width: 30%;
 	padding-bottom: 29px;
 	font-weight: 500;
+	width: 440px;
+
 }
 .index-header-btn{
 	margin: 0;
-	padding-bottom: 0;
 	font-size: 14px;
 	line-height: 18px;
 	background-color: #ee3643;
-	padding: 10px 55px 10px 55px;
-	margin-left: 370px;
 	border-radius: 3px;
 	text-transform: uppercase;
+	width: 253px;
+	height: 38px;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    margin-left: 194px;
 
 }
+.products{
+	display: flex;
+	flex-wrap: wrap;
+	width: 940px;
+	margin-top: 20px;
+}
+.popular-brands{
+	margin: 0 auto;
+	width: 940px;
+}
+.brands-list{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin: 0;
+}
+.brands-item{
+	margin: 0;
+	display: flex;
+	width: 220px;
+	height: 145px;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #ebebeb;
+	margin-right: 15px;
+	margin-top: 20px;
+}
+.brands-item:nth-child(4n){
+	margin-right: 0;
+}
+.brands-item:hover{
+	border-color: #ffffff;
+    box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+.brands-item:active{
+    border-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
+	opacity: 0.3;
+}
+
+
+
+
+
+
 
 
 /*Index*/
@@ -1649,6 +1699,12 @@ label, a{
   height: 0;
   border: 20px solid white;
   border-left-color: #ee3643;
+}
+.margin-right {
+  margin-right: 20px !important;
+}
+.margin-left{
+	margin-right: 0px !important;
 }
 .catalog-paginator{
 	margin-top: 42px;
