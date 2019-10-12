@@ -11,10 +11,10 @@ body {
 .wrapper{
 	padding: 0;
 	margin: 0 auto;
+	box-sizing: border-box;
 	width: 960px;
 	padding-left: 10px;
 	padding-right: 10px;
-	box-sizing: border-box;
 }
 
 .main-header{
@@ -28,16 +28,13 @@ body {
 	display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 .main-header-bar{
 	display: flex;
 	align-items: center;
-	width: 960px;
 	margin: 0 auto;
 	justify-content: space-between;
-	padding: 0;
-	padding-left: 10px;
-	padding-right: 10px;
 	box-sizing: border-box;
 }
 a {  
@@ -75,9 +72,7 @@ a {
     justify-content: center;
     align-items: center;
 	box-shadow: 0 5px 0 0 #b52933;
-	display: block;
-    padding: 13px 55px;
-	box-sizing: border-box;
+	display: flex;
 	height: 42px;
 }
 
@@ -175,7 +170,7 @@ input[type="search"]::placeholder {
     background-color: #ba2732;
 }
 .search-field:hover~.search-submit{
-    opacity: 1.0;
+    opacity: 0;
 }
 .search-field:hover{
     background-color: #212a3a;
@@ -192,10 +187,7 @@ input[type="search"]::placeholder {
     flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
-	width: 960px;
 	margin: 0 auto;
-	padding-left: 10px;
-	padding-right: 10px;
 	box-sizing: border-box;
 	margin-top: 35px;
 	margin-bottom: 35px;
@@ -446,10 +438,7 @@ input[type="search"]::placeholder {
 	display: flex;
     align-items: center;
 	justify-content: space-around;
-	width: 960px;
 	margin: 0 auto;
-	padding-left: 10px;
-	padding-right: 10px;
 	box-sizing: border-box;
 }
 .footer-logo{
@@ -492,12 +481,9 @@ input[type="search"]::placeholder {
 	display: flex;
     align-items: center;
 	justify-content: space-around;
-	width: 960px;
 	margin: 0 auto;
 	padding-bottom: 32px;
 	box-sizing: border-box;
-	padding-left: 10px;
-	padding-right: 10px;
 }
 
 .footer-contacts{
@@ -686,19 +672,18 @@ main{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-bottom: 86px;
+	margin-bottom: 85px;
+	margin-top: 50px;
 }
 
 .company{
 	width:640px;
 	margin: 0;
 	padding: 0;
-	
 }
 .company h2{
 	font-size: 30px;
 	text-transform: uppercase;
-	margin-top: 75px;
 	margin-bottom: 0px;
 	font-weight: 400;
 }
@@ -765,8 +750,9 @@ main{
 .contacts h2{
 	font-size: 30px;
 	text-transform: uppercase;
-	margin-top: 75px;
 	margin-bottom: 0px;
+	font-family: inherit;
+	font-weight: 400;
 }
 .contacts p{
 	font-size: 13px;
@@ -779,9 +765,6 @@ main{
 }
 .promo-index {
     box-sizing: border-box;
-    width: 960px;
-    padding-left: 10px;
-    padding-right: 10px;
     margin-left: auto;
     margin-right: auto;
 	margin-top: 59px;
@@ -901,6 +884,7 @@ main{
 	background-image: url("../img/picture1.jpg");
 	width: 620px;
 	height: 266px;
+
 }
 .drell{
 	background-image: url("../img/picture2.jpg");
@@ -930,9 +914,15 @@ main{
 .slides .image{ 
 	width: 500%;
 	line-height: 0;
+	margin: 0;
+    list-style-type: none;
+	display: block;
+	padding: 0;
 }
 
 .overflow{ 
+	margin: 0;
+	padding: 0;
 	width: 100%;
 	overflow: hidden;
 }
@@ -1066,9 +1056,7 @@ label, a{
     margin: 0;
     padding: 0;
 }
-.index-header{
-	background-color: #f9f5f0;
-}
+
 .popular-brands{
 	margin: 0;
 	padding: 0;
@@ -1078,6 +1066,11 @@ label, a{
 	justify-content: flex-start;
 	align-items: center;
 	margin: 0;
+	background-color: #f9f5f0;
+    padding-top: 27px;
+	padding-left: 30px;
+	padding-right: 0;
+	padding-bottom: 26px;
 }
 .index-header-title{
 	margin: 0;
@@ -1086,11 +1079,8 @@ label, a{
 	line-height: 30px;
 	font-family: 'Cuprum', 'Arial', sans-serif;
 	text-transform: uppercase;
-	padding-top: 30px;
 	color: #32425c;
-	padding-left: 30px;
-	padding-right: 0;
-	padding-bottom: 29px;
+
 	font-weight: 500;
 	width: 440px;
 
@@ -1108,7 +1098,8 @@ label, a{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-    margin-left: 194px;
+    margin-left: auto;
+	margin-right: 24px;
 
 }
 .products{
@@ -1136,7 +1127,7 @@ label, a{
 	align-items: center;
 	border: 1px solid #ebebeb;
 	margin-right: 15px;
-	margin-top: 20px;
+	margin-top: 18px;
 }
 .brands-item:nth-child(4n){
 	margin-right: 0;
@@ -1150,6 +1141,139 @@ label, a{
     box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
 	opacity: 0.3;
 }
+.service{
+	background-color: #f4f8f9;
+	margin-top: 82px;
+}
+.service-title{
+	font-size: 30px;
+	text-transform: uppercase;
+	line-height: 30px;
+	padding-top: 65px;
+	font-weight: 400;
+	margin: 0;
+}
+.service-text{
+	margin: 0;
+	font-size: 14px;
+	line-height: 25px;
+	font-weight: 700;
+	margin-top: 26px;
+}
+.service-slider-controls {
+    position: relative;
+    width: 240px;
+	box-shadow: 0 1px 2px -2px rgba(255, 255, 255, 0.5) inset;
+}
+
+.service-slider-control {
+    display: block;
+    padding: 14px 22px 15px 22px;
+    border-top: 1px solid #405069;
+    border-bottom: 1px solid #293449;
+    font-size: 21px;
+    line-height: 30px;
+    font-family: "Cuprum",Arial ,sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #32425c;
+    cursor: pointer;
+}
+.service-slider-control:hover {
+    background-color: #293449;
+}
+.service-slider input[type='radio'] {
+    display: none;
+}
+.service-slide {
+    width: 620px;
+	display: none;
+}
+.service-slider{
+	position: relative;
+	margin-top: 70px;
+}
+.service-slider-btn-1:checked ~ .service-slider-controls .control-1,
+.service-slider-btn-2:checked ~ .service-slider-controls .control-2,
+.service-slider-btn-3:checked ~ .service-slider-controls .control-3 {
+    color: #32425c;
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+.service-slider-btn-1:checked ~ .service-slider-inner .slide-1{
+	display: block;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	height: 280px;
+	top: -05px;
+	left: 320px;
+	background-image: url(../img/delivery.png);
+	background-position: 152px 25px;
+	background-repeat: no-repeat;
+}
+.service-slider-btn-2:checked ~ .service-slider-inner .slide-2{
+	display: block;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	height: 280px;
+	top: -05px;
+	left: 320px;
+	background-image: url(../img/garant.png);
+	background-position: 232px 0px;
+	background-repeat: no-repeat;
+}
+.service-slider-btn-3:checked ~ .service-slider-inner .slide-3{
+	display: block;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	height: 280px;
+	top: -05px;
+	left: 320px;
+	background-image: url(../img/credit.png);
+	background-position: 155px 0px;
+	background-repeat: no-repeat;
+}
+
+.service-slides {
+    width: 300%;
+    min-height: 272px;
+}
+.service-slide-title {
+    margin: 0 0 24px 0;
+    padding: 0;
+    font-size: 36px;
+    line-height: 36px;
+    font-family: "Cuprum", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #32425c;
+}
+
+.service-slide-text {
+    margin-bottom: 25px;
+    width: 380px;
+}
+.service-slide-btn{
+	margin: 0;
+	padding: 0;
+	width: 195px;
+	height: 38px;
+	background-color: #ff5357;
+	box-sizing: border-box;
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+}
+
+
 
 
 
@@ -1773,7 +1897,7 @@ label, a{
 	padding: 0;
 }
 .container-center{
-
+   padding-bottom: 100px;
 }
 .catalog-promo-title{
   font-size: 30px;

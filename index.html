@@ -10,20 +10,20 @@
   <body>
     <header class="main-header">
 	  <div class="main-header-top">
-        <div class="main-header-bar">
+        <div class="main-header-bar wrapper">
           <a class="main-logo" href="index.html">
             <img src="img/technomart.png" alt="Техномарт">
           </a>
           <form class="search" action="#" method="get">
             <input class="search-field" id="search-field" type="search" name="search" placeholder="Поиск:">
-			<button class="search-submit" id="search-submit" type="submit"></button>
+			<button class="search-submit" id="search-submit" type="submit" aria-hidden="true"><p class="visually-hidden">Поиск</p></button>
           </form>
 		  <a class="bookmark" href="#">Закладки:&nbsp;<span>0</span></a>
           <a class="basket" href="#">Корзина:&nbsp;<span class="count">0</span></a>
           <a class="order" href="#">Оформить заказ</a>
         </div>
 	  </div>
-      <div class="header-middle">
+      <div class="header-middle wrapper">
         <div class="headinfo-block">
 		  <h1 class="headinfo">Интернет-магазин <br>строительных материалов<br>и инструментов для ремонта</h1>
 		</div>  
@@ -99,23 +99,23 @@
 					<input type="radio" name="slider" id="switch2" class="switch-invisible">
 				<div class="slides">
 					<div class="overflow">
-						<div class="image">
-							<div class="slide perforator">
-								 <h2 class="features-slide-title">Перфораторы</h2>
-                                 <p class="features-slide-text">Настоящие мужские игрушки</p>
+						<ul class="image">
+							<li class="slide perforator">
+							  <h3 class="features-slide-title" data_temp_dwid="1">Перфораторыma</h3>
+							  <p class="features-slide-text">Настоящие мужские игрушки</p>
                                  <a href="#" class="features-slide-btn btn">Открыть каталог</a>
-							</div>
-							<div class="slide drell">
-								  <h2 class="features-slide-title">Дрели</h2>
+							</li>
+							<li class="slide drell">
+								  <h3 class="features-slide-title">Дрели</h3>
                                    <p class="features-slide-text">Соседям на радость!</p>
                                    <a href="#" class="features-slide-btn">Открыть каталог</a>
-							</div>
-						</div>
+							</li>
+						</ul>
 					</div>
 				</div>
 				<div class="controls" id="controls">
-					<label for="switch1"></label>
-					<label for="switch2"></label>
+					<label for="switch1" role="button"><p class="visually-hidden">Следующий слайд</p></label>
+					<label for="switch2" role="button"><p class="visually-hidden">Предыдущий слайд</p></label>
 				</div>
 				<div class="active">
 					<label for="switch1"></label>
@@ -143,7 +143,7 @@
              </ul>
            </div>
          </section>
-         <article class="popular-products wrapper">
+         <section class="popular-products wrapper">
            <div class="index-header">
                <h2 class="index-header-title">Популярные товары:</h2>
                <a href="#" class="index-header-btn">Все популярные товары</a>
@@ -199,7 +199,7 @@
                     <div class="product-card-price">12500 р.</div>
                   </article>
                 </section>
-              </article>
+              </section>
               <article class="popular-brands wrapper">
                 <div class="index-header">
                   <h2 class="index-header-title">Популярные производители:</h2>
@@ -233,39 +233,42 @@
                </div>
              </article>
              <article class="service">
-               <div class="container-center">
+               <div class="container-center wrapper">
                  <h2 class="service-title">Сервисы</h2>
                  <p class="service-text">
-                   Хороший интернет-магазин отличается от плохого не только ценами!
+                   Хороший интернет-магазин отличается от плохого не только ценами!<br>
                    Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
                  </p>
                  <article class="service-slider">
-                   <div class="service-slider-controls">
-                     <p class="service-slider-control-1">Доставка</p>
-                     <p class="service-slider-control-2">Гарантия</p>
-                     <p class="service-slider-control-3">Кредит</p>
-                   </div>
+                    <input type="radio" class="service-slider-btn-1" id="service-slider-btn-1" name="service-toggle" checked>
+                    <input type="radio" class="service-slider-btn-2" id="service-slider-btn-2" name="service-toggle">
+                    <input type="radio" class="service-slider-btn-3" id="service-slider-btn-3" name="service-toggle">
+                    <div class="service-slider-controls">
+                        <label class="service-slider-control control-1" for="service-slider-btn-1">Доставка</label>
+                        <label class="service-slider-control control-2" for="service-slider-btn-2">Гарантия</label>
+                        <label class="service-slider-control control-3" for="service-slider-btn-3">Кредит</label>
+                    </div>
                    <div class="service-slider-inner">
-                     <div class="service-slide">
+                     <div class="service-slide slide-1">
                        <h2 class="service-slide-title">Доставка</h2>
                        <p class="service-slide-text page-text">
-                                   Мы с удовольствием доставим ваш товар прямо
+                                   Мы с удовольствием доставим ваш товар прямо<br>
                                    к вашему подъезду совершенно бесплатно!<br>
                                    Ведь мы неплохо заработаем,<br>
                                    поднимая его на ваш этаж!
                         </p>
                       </div>
-                      <div class="service-slide">
+                      <div class="service-slide slide-2">
                         <h2 class="service-slide-title">Гарантия</h2>
                         <p class="service-slide-text page-text">
-                                   Если купленный у нас товар поломается или заискрит,
-                                   а также в случае пожара, спровоцированного его возгаранием,
-                                   вы всегда можете быть уверены в нашей гарантии. Мы обменяем
+                                   Если купленный у нас товар поломается или заискрит,<br>
+                                   а также в случае пожара, спровоцированного его возгаранием,<br>
+                                   вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
                                    сгоревший товар на новый.<br>
                                    Дом уж восстановите как-нибудь сами.
                         </p>
                       </div>
-                      <div class="service-slide">
+                      <div class="service-slide slide-3">
                         <h2 class="service-slide-title">Кредит</h2>
                         <p class="service-slide-text page-text">
                                    Залезть в долговую яму стало проще!<br>
@@ -324,7 +327,7 @@
         </main>
       <footer class="main-footer">
         <div class="main-footer-content">
-          <div class="main-footer-content-top">
+          <div class="main-footer-content-top wrapper">
             <a class="footer-logo" href="index.html">
 			  <img src="img/technomart-footer.png" alt="Техномарт">
 			</a>
@@ -346,7 +349,7 @@
              </li>
            </ul> 
           </div>
-          <div class="main-footer-content-bottom">
+          <div class="main-footer-content-bottom wrapper">
 		    <p class="footer-contacts">
               г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
               +7 (812) 555-05-55
