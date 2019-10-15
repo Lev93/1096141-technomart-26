@@ -299,6 +299,7 @@
                   <img src="img/map.jpg" alt="map" >
 			  </a>
               <section class="map-big popup">
+				  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651554!2d30.32089461668413!3d59.938794181876304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1571167950591!5m2!1sru!2sru" width="940" height="446" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                   <img src="img/big-map.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург">
                 <a class="window-message-close popup-close" href="#">закрыть</a>
               </section>
@@ -414,5 +415,61 @@
 		  </div>	  
         </div>
       </footer>
+	  
+<script>
+  var link = document.querySelector(".redbutton-2");
+  var popup = document.querySelector(".window-message");
+  var close = popup.querySelector(".window-message-close");
+  var login = popup.querySelector("[name=name]");
+  var form = popup.querySelector(".contact-form");
+  var email = popup.querySelector("[name=email]");
+	
+link.addEventListener("click", function (evt) {
+evt.preventDefault();
+popup.classList.add("modal-show");	
+login.focus();	
+  });
+close.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.remove("modal-show");
+  });
+  form.addEventListener("submit", function (evt) {
+    evt.preventDefault();
+  });	
+window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (popup.classList.contains("modal-show")) {
+        popup.classList.remove("modal-show");
+      }
+    }
+  });	
+  var mapLink = document.querySelector(".map");
+
+  var mapPopup = document.querySelector(".map-big");
+  var mapClose = mapPopup.querySelector(".window-message-close");
+	 mapLink.addEventListener("click", function (evt2) {
+    evt2.preventDefault();
+    mapPopup.classList.add("modal-show");
+  });
+
+  mapClose.addEventListener("click", function (evt2) {
+    evt2.preventDefault();
+    mapPopup.classList.remove("modal-show");
+  });
+
+  window.addEventListener("keydown", function (evt2) {
+    if (evt2.keyCode === 27) {
+      if (mapPopup.classList.contains("modal-show")) {
+        evt2.preventDefault();
+        mapPopup.classList.remove("modal-show");
+      }
+    }
+  });
+	
+	
+</script>
+	  
+	  
     </body>
   </html>
