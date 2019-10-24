@@ -1,4 +1,4 @@
-html {
+﻿html {
      min-width: 960px;
 }
  body {
@@ -328,6 +328,7 @@ html {
      background-color: white;
      display: flex;
      align-items: center;
+	 position: relative;
 }
 .username{
 	 color: rgb(0, 0, 0);
@@ -345,29 +346,34 @@ html {
 	 cursor: pointer;
 }
  .user {
-     position: absolute;
-     background: url("../img/icon-user.svg") no-repeat;
-     width: 20px;
-     height: 19px;
-     right: 250px;
-     top: 15px;
-     left: 15px;
-     box-sizing: border-box;
-     opacity: 0.3;
+     display: flex;
+     flex-wrap: wrap;
+     width: 257px;
 	 cursor: pointer;
 }
-.user:hover{
-	 opacity: 1;
+.icon-user{
+	position: absolute;
+	left: 15px;
+	top: 15px;
+	opacity: 0.3;
 }
+.user:hover .icon-user{
+	opacity: 1;
+}
+.user:active .icon-user{
+	opacity: 0.3;
+}
+.user:active .username{
+	opacity: 0.3;
+}
+
 .logout:hover {
 	 opacity: 1;
 }
 .logout:active {
 	 opacity: 0.3;
 }
-.user:active{
-	 opacity: 0.3;
-}
+
 .user-block-bottom {
      padding-top: 5px;
      display: flex;
@@ -1112,7 +1118,7 @@ html {
 
      margin-top: 26px;
      width: 400px;
-     font-family: "PT Sans",Arial,sans-serif;
+     font-family: "PT Sans","Arial",sans-serif;
 }
  .service-slider-controls {
      position: relative;
@@ -1444,9 +1450,6 @@ html {
  .filter-brands-item:last-of-type, .filter-supply-item:last-of-type {
      margin-bottom: 22px;
 }
- .filer-brands-checkbox, .filter-supply-radio {
-     display: none;
-}
  .filter-brands-item {
      background: url("../img/checkbox-off.svg") no-repeat;
      width: 23px;
@@ -1467,6 +1470,13 @@ html {
  .filer-brands-checkbox:checked+label:active {
      background: url("../img/checkbox-on-active.svg") no-repeat;
 }
+.filer-brands-checkbox:focus~.filter-brands-item{
+	border: 1px  solid #E71216;
+}
+.filter-supply-radio:focus~.filter-supply-item{
+	border: 1px  solid #E71216;
+}
+
  .filter-supply-item {
      position: relative;
      display: block;
@@ -1508,6 +1518,7 @@ html {
      text-transform: uppercase;
      font-family: "PT Sans", "Arial", sans-serif;
      font-weight: bold;
+	 cursor: pointer;
 }
  .catalog-gallery {
      width: 700px;
@@ -1776,7 +1787,7 @@ html {
      font-size: 13px;
      line-height: 18px;
      color: rgb(0, 0, 0);
-     font-family: "PT Sans", sans-serif;
+     font-family: "PT Sans", "Arial", sans-serif;
      border: 1px solid #e5e5e5;
      padding-top: 10px;
      padding-bottom: 10px;
@@ -2123,15 +2134,3 @@ html {
 .contact-form-item:focus{
 	 border: 2px solid #ee3643;
 }
-
-
-
-
-
-
-
-
-
-
-
-

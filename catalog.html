@@ -1,11 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
    <head>
       <meta charset="UTF-8">
       <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
       <title>Техномарт</title>
-      <link href="css/style.css" rel="stylesheet">
+	  <link rel="stylesheet" href="css/normalize.min.css">
+      <link href="css/style.min.css" rel="stylesheet">
    </head>
    <body>
       <header class="main-header">
@@ -37,8 +38,10 @@
             </div>
             <div class="user-block">
                <div class="login-field">
-				   <a class="user" href="#"><a>
-				   <span class="username">Равшан Джамшутович</span>
+			       <a class="user" href="#">
+					   <img src="img/icon-user.svg" class="icon-user" alt="иконка пользователя">
+				       <span class="username">Равшан Джамшутович</span>
+				   </a>
 				   <a class="logout" href="#"><a>
 			   </div>
                <div class="user-block-bottom">
@@ -50,7 +53,7 @@
          </div>
          <nav class="mainnav">
             <ul class="site-navigation">
-               <li class="main-nav-ul-link"><a href="info.html">Главная</a></li>
+               <li class="main-nav-ul-link"><a href="index.html">Главная</a></li>
                <li class="main-nav-ul-link"><a href="company.html">Компания</a></li>
                <li class="main-nav-ul-link"><a href="catalog.html">Каталог</a></li>
                <li class="main-nav-ul-link"><a href="news.html">Новости</a></li>
@@ -110,22 +113,22 @@
                         </fieldset>
                         <fieldset class="filter filter-brands">
                            <legend class="filter-title">Производители</legend>
-                           <input class="filer-brands-checkbox" id="checkbox-1" type="checkbox" name="checkbox" value="bosch" checked>
+                           <input class="filer-brands-checkbox visually-hidden" id="checkbox-1" type="checkbox" name="checkbox" value="bosch" checked>
                            <label class="filter-brands-item" for="checkbox-1">Bosch</label>
-                           <input class="filer-brands-checkbox" id="checkbox-2" type="checkbox" name="checkbox" value="interscol">
+                           <input class="filer-brands-checkbox visually-hidden" id="checkbox-2" type="checkbox" name="checkbox" value="interscol">
                            <label class="filter-brands-item" for="checkbox-2">Интерскол</label>
-                           <input class="filer-brands-checkbox" id="checkbox-3" type="checkbox" name="checkbox" value="makita" checked>
+                           <input class="filer-brands-checkbox visually-hidden" id="checkbox-3" type="checkbox" name="checkbox" value="makita" checked>
                            <label class="filter-brands-item" for="checkbox-3">Makita</label>
-                           <input class="filer-brands-checkbox" id="checkbox-4" type="checkbox" name="checkbox" value="dewalt">
+                           <input class="filer-brands-checkbox visually-hidden" id="checkbox-4" type="checkbox" name="checkbox" value="dewalt">
                            <label class="filter-brands-item" for="checkbox-4">Dewalt</label>
-                           <input class="filer-brands-checkbox" id="checkbox-5" type="checkbox" name="checkbox" value="hitachi">
+                           <input class="filer-brands-checkbox visually-hidden" id="checkbox-5" type="checkbox" name="checkbox" value="hitachi">
                            <label class="filter-brands-item" for="checkbox-5">Hitachi</label>
                         </fieldset>
                         <fieldset class="filter filter-supply">
                            <legend class="filter-title">Питание</legend>
-                           <input class="filter-supply-radio" id="radio-1" type="radio" name="radiogroup" value="battery" checked>
+                           <input class="filter-supply-radio visually-hidden" id="radio-1" type="radio" name="radiogroup" value="battery" checked>
                            <label class="filter-supply-item" for="radio-1">Аккумуляторные</label>
-                           <input class="filter-supply-radio" id="radio-2" type="radio" name="radiogroup" value="mains">
+                           <input class="filter-supply-radio visually-hidden" id="radio-2" type="radio" name="radiogroup" value="mains">
                            <label class="filter-supply-item" for="radio-2">Сетевые</label>
                         </fieldset>
                         <button class="catalog-btn" type="submit">Показать</button>
@@ -380,7 +383,7 @@
             <a class="modal-cart-close-btn" href="#">Продолжить покупки</a>
          </div>
       </div>
-      <script src="js/scriptcatalog.js"></script>
-      <script src="js/scriptcatalogavtive.js"></script>
+      <script src="js/scriptcatalog.min.js"></script>
+      <script src="js/scriptcatalogavtive.min.js"></script>
    </body>
 </html>
