@@ -19,7 +19,7 @@
                   <button class="search-submit" id="search-submit" type="submit"></button>
                </form>
                <a class="bookmark" href="#">Закладки:&nbsp;<span class="bookmarkspan">0</span></a>
-               <a class="basket" href="#">Корзина:&nbsp;<span class="count">0</span></a>
+               <a class="basket active" href="#">Корзина:&nbsp;<span class="count">10</span></a>
                <a class="order" href="#">Оформить заказ</a>
             </div>
          </div>
@@ -36,10 +36,10 @@
                <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </div>
             <div class="user-block">
-               <div class="Login-field">
+               <div class="login-field">
 				   <a class="user" href="#"><a>
 				   <span class="username">Равшан Джамшутович</span>
-				   <a class="Logout" href="#"><a>
+				   <a class="logout" href="#"><a>
 			   </div>
                <div class="user-block-bottom">
                   <a class="user-block-link" href="#">Мои заказы</a>
@@ -133,9 +133,9 @@
                   </section>
                   <section class="catalog-gallery">
                      <header class="filter-header-2">
-                        <p class="filter-header-title-2">
+                        <h2 class="filter-header-title-2">
                            Сортировка:
-                        </p>
+                        </h2>
                         <div class="sort-list">
                            <a class="sort-item sort-item-active" href="#">По цене</a>
                            <a class="sort-item" href="#">По типу</a>
@@ -371,7 +371,7 @@
          </div>
       </footer>
       <div class="modal-cart popup">
-         <button class="popup-close modal-cart-close">Назад</button>
+         <button class="popup-close modal-cart-close"><span class="visually-hidden">закрыть</span></button>
          <div class="modal-cart-content">
             <p class="modal-cart-text">Товар добавлен в корзину!</p>
          </div>
